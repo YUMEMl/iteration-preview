@@ -29,7 +29,7 @@ Iterationは新しい基盤モデルではありません。利用者が選ん�
 Windows／macOS対応、配布方法、対応モデル、ライセンスなどの詳細は、公開準備ができた段階で案内します。
 
 ---
-
+正直完成の目処が立ってません；；
 Iteration is a local-first assistant for conversation, writing, and project development.
 
 It is currently under development. This repository is an introduction only; application downloads and source code are not publicly available yet.
