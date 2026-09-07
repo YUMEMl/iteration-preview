@@ -34,5 +34,3 @@ Windows／macOS対応、配布方法、対応モデル、ライセンスなど�
 Iteration is a local-first assistant for conversation, writing, and project development.
 
 It is currently under development. This repository is an introduction only; application downloads and source code are not publicly available yet.
-
-Developed by [YUME](https://github.com/YUMEMl).
