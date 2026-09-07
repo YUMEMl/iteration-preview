@@ -1,61 +1,37 @@
 # Iteration
 
-ローカルのLLMを使い、会話・文章作成・プロジェクト開発を一つの画面で扱うアプリです。
-開発者：[YUME](https://github.com/YUMEMl)
+Iterationは、ローカルLLMを使って会話・文章作成・プロジェクト開発を一つの画面で扱うためのアプリです。
 
-**現在は紹介のみを公開しています。アプリ本体の配布と、ソースコードの一般公開は停止中です。**
-このリポジトリには紹介文だけを置いています。インストーラー、モデルの重み、アプリの実装コードは含みません。
+> 現在は開発中です。このリポジトリでは紹介のみを公開しており、アプリ本体やソースコードはまだ配布していません。
 
-## どんなアプリか
+## できること
 
-Iterationは新しい基盤モデルではなく、利用者が選んだローカルモデルを使うためのアプリです。
-通常の会話と開発作業を別の製品に分けず、同じ会話履歴から扱います。
+- ローカルモデルとの会話
+- 文章の作成・整理・翻訳
+- 画像や資料を添付したやり取り
+- モデル、応答言語、System Prompt、Context Lengthの設定
+- プロジェクト内のファイル読取とコード検索
+- 差分を確認してからのファイル変更
+- Terminalを使ったビルドとテスト
+- Git、LSP、MCP、Web情報を使った開発作業
+- カスタムAgentや読取専用Agentによる並列調査
 
-- 会話、文章の作成・整理、選択した文章の翻訳
-- 複数行の入力と、対応モデルへの画像・資料の添付
-- モデルの選択、応答言語、System Prompt、Context Lengthの設定
-- 対象プロジェクトを選んだファイル読取、コード検索、変更案の確認
-- 承認した差分の適用と、Terminalによるビルド・テスト
-- Git、LSP、MCP、公開Web情報を使う開発作業
-- カスタムAgent、読取専用Agentの並列調査、ローカルの会話書き出し
+## 基本方針
 
-## 操作の考え方
+Iterationは新しい基盤モデルではありません。利用者が選んだローカルモデルを、普段の会話から開発作業まで同じ流れで使うためのアプリです。
 
-画面の「Iteration」からモデル管理を開き、使用するモデルを選びます。
-追加モデルは、容量や注意点を確認してから個別にダウンロードする設計です。
-アプリを開いただけで、モデルの取得が始まることはありません。
-
-開発作業では、まず対象フォルダーを指定します。
-ファイル変更やコマンドは、提案された内容を確認してから実行します。
-モデルが「承認された」と出力しても、それだけで実行権限は与えません。
-
-通常の会話はローカル推論を基本とします。Web取得、モデルのダウンロード、外部ツールの起動は別の操作です。
-外部ツールを起動した場合、そのツール自身のモデル・通信・権限の設定が適用されます。
+モデルの追加ダウンロード、ファイル変更、コマンド実行、外部ツールの利用は、それぞれ内容を確認してから行う設計にしています。
 
 ## 開発状況
 
-Linux上で開発・検証しています。DesktopとCLIの実装があり、現在は配布前の検証を進めています。
-独立したレビュー、新しく生成した入力、異常終了や競合を含むテストを行い、見つかった問題を修正しています。
+現在はLinux向けのDesktop版とCLI版を開発・検証しています。不具合の修正や操作性の改善を進めている段階です。
 
-現時点で、次のことは保証していません。
-
-- すべてのモデル・言語・プロジェクトでの回答品質
-- ネイティブ話者や博士号取得者と同等の能力
-- 256Kの設定での品質、速度、メモリ適合
-- OpenCodeなど他製品と同等の機能・性能
-- Windows／macOSでの完成した配布・動作
-- あらゆる不具合や安全上の問題を検出済みであること
-
-候補モデルの名前や規模は、性能順位を意味しません。
-利用できる機能や速度は、モデルの配布形式、ランタイム、メモリ、実行環境によって変わります。
-
-## 今後の公開
-
-本体とソースの公開時期は未定です。配布を再開する際は、対応環境、導入方法、ライセンス、検証済みの範囲を案内します。
-この紹介ページから、アプリのダウンロードや実装コードの閲覧・編集はできません。
+Windows／macOS対応、配布方法、対応モデル、ライセンスなどの詳細は、公開準備ができた段階で案内します。
 
 ---
 
-Iteration is a local-first assistant for conversation, writing and project development.
-This repository is an introduction only. Application downloads and public source distribution are currently unavailable.
-Model names and planned capabilities are not claims of benchmark parity or production readiness.
+Iteration is a local-first assistant for conversation, writing, and project development.
+
+It is currently under development. This repository is an introduction only; application downloads and source code are not publicly available yet.
+
+Developed by [YUME](https://github.com/YUMEMl).
